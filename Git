@@ -17,4 +17,49 @@ libglvnd-glx-1.0.1-0.8.git5baa1e5.el7.x86_64
 $ sudo yum -y install git
 
 
+Working With GIT
+
+$ mkdir website
+$ cd website/
+$ git init
+Initialized empty Git repository in /home/rsa-key-20190610/website/.git/
+$ git status
+# On branch master
+#
+# Initial commit
+#
+nothing to commit (create/copy files and use "git add" to track)
+$ vi index.html
+$ cat index.html
+<html>
+<title>
+<h1></h1>
+</title>
+<body>
+</body>
+</html>
+$ git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       index.html
+nothing added to commit but untracked files present (use "git add" to track)
+$ git add index.html
+$ git commit -m "commited from staging area to repo"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <rsa-key-20190610@dev.us-central1-a.c.possible-enigma-243307.internal>) not allowed
 
