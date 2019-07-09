@@ -49,6 +49,17 @@ $ git status
 #       index.html
 nothing added to commit but untracked files present (use "git add" to track)
 $ git add index.html
+$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#       new file:   index.html
+#
+
 $ git commit -m "commited from staging area to repo"
 
 *** Please tell me who you are.
@@ -75,4 +86,89 @@ core.filemode=true
 core.bare=false
 core.logallrefupdates=true
 
+$ git commit -m "commited from staging area to repo"
+[master (root-commit) c6bfd35] commited from staging area to repo
+ 1 file changed, 7 insertions(+)
+ create mode 100644 index.html
 
+Commit History
+
+$ git log
+commit c6bfd354b0617d0730919113de510004e52cabf9
+Author: Gaurav Kumar <jk.gaurav@gmail.com>
+Date:   Tue Jul 9 16:12:26 2019 +0000
+
+    commited from staging area to repo
+
+$ git show c6bfd354b0617d0730919113de510004e52cabf9
+commit c6bfd354b0617d0730919113de510004e52cabf9
+Author: Gaurav Kumar <jk.gaurav@gmail.com>
+Date:   Tue Jul 9 16:12:26 2019 +0000
+
+    commited from staging area to repo
+
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..3cbd25e
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,7 @@
++<html>
++<title>
++<h1></h1>
++</title>
++<body>
++</body>
++</html>
+
+$ git log --since 2019-07-08
+commit 48a5607df79af0fed7c8b3b376f58c4f40c6f315
+Author: Gaurav Kumar <jk.gaurav@gmail.com>
+Date:   Tue Jul 9 16:20:43 2019 +0000
+
+    updated body
+
+commit c1a9b903f6291ef631e9a28953b6287d4c0e0492
+Author: Gaurav Kumar <jk.gaurav@gmail.com>
+Date:   Tue Jul 9 16:19:34 2019 +0000
+
+    updated title
+
+commit c6bfd354b0617d0730919113de510004e52cabf9
+Author: Gaurav Kumar <jk.gaurav@gmail.com>
+Date:   Tue Jul 9 16:12:26 2019 +0000
+
+    commited from staging area to repo
+
+
+$ git log --author Gaurav
+commit 48a5607df79af0fed7c8b3b376f58c4f40c6f315
+Author: Gaurav Kumar <jk.gaurav@gmail.com>
+Date:   Tue Jul 9 16:20:43 2019 +0000
+
+    updated body
+
+commit c1a9b903f6291ef631e9a28953b6287d4c0e0492
+Author: Gaurav Kumar <jk.gaurav@gmail.com>
+Date:   Tue Jul 9 16:19:34 2019 +0000
+
+    updated title
+
+commit c6bfd354b0617d0730919113de510004e52cabf9
+Author: Gaurav Kumar <jk.gaurav@gmail.com>
+Date:   Tue Jul 9 16:12:26 2019 +0000
+
+    commited from staging area to repo
+
+
+$ git log --grep title
+commit c1a9b903f6291ef631e9a28953b6287d4c0e0492
+Author: Gaurav Kumar <jk.gaurav@gmail.com>
+Date:   Tue Jul 9 16:19:34 2019 +0000
+
+    updated title
+
+$ git log --oneline
+48a5607 updated body
+c1a9b90 updated title
+c6bfd35 commited from staging area to repo
