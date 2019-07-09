@@ -1,3 +1,20 @@
 Introduction: https://docs.google.com/document/d/118L_Gkvh_9LJWAEPIYCx6MIjdNYPwMbvFskQLp5et7s/edit?usp=sharing
 
+Installing Git
+To check if git is available or not use:
+
+$ git --version
+-bash: git: command not found
+
+$ rpm -qa | grep git
+net-tools-2.0-0.24.20131004git.el7.x86_64
+libglvnd-1.0.1-0.8.git5baa1e5.el7.x86_64
+linux-firmware-20180911-69.git85c5d90.el7.noarch
+crontabs-1.11-6.20121102git.el7.noarch
+libglvnd-egl-1.0.1-0.8.git5baa1e5.el7.x86_64
+libglvnd-glx-1.0.1-0.8.git5baa1e5.el7.x86_64
+
+$ sudo yum -y install git
+
+
 
