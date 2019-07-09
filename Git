@@ -63,3 +63,16 @@ Omit --global to set the identity only in this repository.
 
 fatal: empty ident name (for <rsa-key-20190610@dev.us-central1-a.c.possible-enigma-243307.internal>) not allowed
 
+Setting the Configuration
+$ git config --global user.name "Gaurav Kumar"
+$ git config --global user.email "jk.gaurav@gmail.com"
+
+$ git config --list
+user.name=Gaurav Kumar
+user.email=jk.gaurav@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+
+
