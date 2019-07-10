@@ -232,3 +232,17 @@ do so (now or later) by using -b with the checkout command again. Example:
   git checkout -b new_branch_name
 
 HEAD is now at 4d32522... consulting in consulting
+
+
+Undo Changes
+
+Made changes but didn’t stage them and commit, use -- checkout
+Manual undo
+git checkout -- <file>
+
+Made changes but staged the changes, use reset
+git reset HEAD <file>
+
+Made changes, staged the changes and commited changes
+git revert <commit>
+
