@@ -203,3 +203,9 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 $ git commit -m "conflict resolved"
 [master e581a12] conflict resolved
+
+
+
+Git Ignore
+
+https://www.gitignore.io/
