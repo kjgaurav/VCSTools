@@ -209,3 +209,10 @@ $ git commit -m "conflict resolved"
 Git Ignore
 
 https://www.gitignore.io/
+
+
+Tagging
+
+You can tag till a particular commit id, imagine all the files till now are my working copies:
+git tag 1.0 -m “release-1.0” <commit_id>
+git push --tags
