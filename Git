@@ -172,3 +172,17 @@ $ git log --oneline
 48a5607 updated body
 c1a9b90 updated title
 c6bfd35 commited from staging area to repo
+
+
+
+History - Reflog
+
+$ git log --oneline --decorate --graph --all
+* 48a5607 (HEAD, master) updated body
+* c1a9b90 updated title
+* c6bfd35 commited from staging area to repo
+
+$ git reflog
+48a5607 HEAD@{0}: commit: updated body
+c1a9b90 HEAD@{1}: commit: updated title
+c6bfd35 HEAD@{2}: commit (initial): commited from staging area to repo
