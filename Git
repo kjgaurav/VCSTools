@@ -186,3 +186,20 @@ $ git reflog
 48a5607 HEAD@{0}: commit: updated body
 c1a9b90 HEAD@{1}: commit: updated title
 c6bfd35 HEAD@{2}: commit (initial): commited from staging area to repo
+
+
+Merge Conflict
+
+$ git merge training
+Updating 98db185..b52b056
+Fast-forward
+ services.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+$ git merge consulting
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ git commit -m "conflict resolved"
+[master e581a12] conflict resolved
