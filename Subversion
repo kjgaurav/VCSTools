@@ -20,3 +20,9 @@ tcp        0      0 0.0.0.0:3690            0.0.0.0:*               LISTEN      
 $ ps -ef | grep svn
 root      3942     1  0 09:33 ?        00:00:00 /usr/bin/svnserve --daemon --pid-file=/run/svnserve/svnserve.pid -r /var/svn
 rsa-key+  3972  3752  0 09:34 pts/1    00:00:00 grep --color=auto svn
+
+$ sudo mkdir sub
+
+$ sudo svnadmin create sub/      ##to create repository
+$ ls sub/
+conf  db  format  hooks  locks  README.txt
