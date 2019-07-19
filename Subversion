@@ -33,3 +33,6 @@ $ sudo cat /etc/sysconfig/svnserve
 #
 # Specify the repository location in -r parameter:
 OPTIONS="-r /var/svn"
+
+Subversion on CentOS
+https://wiki.centos.org/HowTos/Subversion
