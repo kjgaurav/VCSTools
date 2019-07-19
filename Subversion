@@ -45,3 +45,19 @@ Committed revision 1.
 
 $ svn list file:///home/rsa-key-20190610/sub/home/rsa-key-20190610/sub/
 hello.sh
+
+@svnserver
+https://stackoverflow.com/questions/15470187/svn-checkout-no-repository-found
+$ ps -ef | grep svnserve
+root      5107     1  0 10:52 ?        00:00:00 /usr/bin/svnserve --daemon --pid-file=/run/svnserve/svnserve.pid -r /var/svn
+rsa-key+  5803  3752  0 11:36 pts/1    00:00:00 grep --color=auto svnserve
+$ kill -3 5107
+$ sudo svnserve -d -r /home/rsa-key-20190610/sub/
+$ ps -ef | grep svnserve
+root      5838     1  0 11:38 ?        00:00:00 svnserve -d -r /home/rsa-key-20190610/sub/
+rsa-key+  5840  3752  0 11:38 pts/1    00:00:00 grep --color=auto svnserve
+
+@svnclientserver
+$ svn list svn://ipaddr/home/rsa-key-20190610/sub/
+hello.sh
+
