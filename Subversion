@@ -1,0 +1,22 @@
+$ sudo yum install -y subversion
+$ sudo systemctl start svnserve
+
+$ sudo systemctl status svnserve
+● svnserve.service - Subversion protocol daemon
+   Loaded: loaded (/usr/lib/systemd/system/svnserve.service; disabled; vendor preset: disabled)
+   Active: active (running) since Fri 2019-07-19 09:33:23 UTC; 7s ago
+  Process: 3941 ExecStart=/usr/bin/svnserve --daemon --pid-file=/run/svnserve/svnserve.pid $OPTIONS (code=exited, status=0/SUCCESS)
+ Main PID: 3942 (svnserve)
+   CGroup: /system.slice/svnserve.service
+           └─3942 /usr/bin/svnserve --daemon --pid-file=/run/svnserve/svnserve.pid -r /var/svn
+
+Jul 19 09:33:23 shellscript systemd[1]: Starting Subversion protocol daemon...
+Jul 19 09:33:23 shellscript systemd[1]: Started Subversion protocol daemon.
+
+
+$ sudo netstat -ntpl | grep 3690
+tcp        0      0 0.0.0.0:3690            0.0.0.0:*               LISTEN      3942/svnserve
+
+$ ps -ef | grep svn
+root      3942     1  0 09:33 ?        00:00:00 /usr/bin/svnserve --daemon --pid-file=/run/svnserve/svnserve.pid -r /var/svn
+rsa-key+  3972  3752  0 09:34 pts/1    00:00:00 grep --color=auto svn
