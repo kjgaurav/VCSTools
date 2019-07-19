@@ -58,6 +58,10 @@ root      5838     1  0 11:38 ?        00:00:00 svnserve -d -r /home/rsa-key-201
 rsa-key+  5840  3752  0 11:38 pts/1    00:00:00 grep --color=auto svnserve
 
 @svnclientserver
-$ svn list svn://ipaddr/home/rsa-key-20190610/sub/
+$ svn list svn://ipaddr/home/rsa-key-.../sub/
 hello.sh
 
+export at remote server
+$ svn export svn://ipaddress/home/rsa-key-.../sub/hello.sh
+A    hello.sh
+Export complete.
