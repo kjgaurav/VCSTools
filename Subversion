@@ -36,3 +36,10 @@ OPTIONS="-r /var/svn"
 
 Subversion on CentOS
 https://wiki.centos.org/HowTos/Subversion
+
+
+$ sudo svn import hello.sh file:///home/rsa-key-20190610/sub/home/rsa-key-20190610/sub/hello.sh -m "import hello.sh"
+Adding         hello.sh
+
+Committed revision 1.
+
