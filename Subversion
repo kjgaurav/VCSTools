@@ -43,3 +43,5 @@ Adding         hello.sh
 
 Committed revision 1.
 
+$ svn list file:///home/rsa-key-20190610/sub/home/rsa-key-20190610/sub/
+hello.sh
